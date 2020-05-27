@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "560744223381",
+    "firebase_url": "https://entrance-examination-app.firebaseio.com",
+    "project_id": "entrance-examination-app",
+    "storage_bucket": "entrance-examination-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560744223381:android:5486a6d15309c62bfbc19c",
+        "android_client_info": {
+          "package_name": "com.example.entranceexamapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560744223381-7anehk4ievq3n7t2v3kok71magg5vtaf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD239Tz-nYksyCO1zg30m5JJ5mrrngHAWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "560744223381-7anehk4ievq3n7t2v3kok71magg5vtaf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
