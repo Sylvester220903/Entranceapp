@@ -77,11 +77,8 @@ public class LoginActivity extends AppCompatActivity {
                         if(task.isSuccessful()){
 
                             Toast.makeText(LoginActivity.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
-
-                            ab="Due to the current COVID-19 pandemic all Theatres and Cinemas are currently closed. All your bookings will be saved for later when services resume. We thank you for your understanding.";
-                            notify1(ab);
-
-                            //startActivity(new Intent(getApplicationContext(), MoviesActivity.class));
+                            startActivity(new Intent(getApplicationContext(), QuestionsActivity.class));
+                            finish();
                         }
                         else{
                             Toast.makeText(LoginActivity.this, "Error : " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
@@ -116,14 +113,14 @@ public class LoginActivity extends AppCompatActivity {
 
         }
 
-        NotificationCompat.Builder notificationBuilder = (NotificationCompat.Builder) new NotificationCompat.Builder(this,CHANNEL_ID);
-        notificationBuilder.setSmallIcon(R.drawable.ic_launcher_background);
-        notificationBuilder.setContentTitle("pickmymovie");
-        //Toast.makeText(MainActivity.this,ab, Toast.LENGTH_SHORT).show();
-        notificationBuilder.setContentText(ab);
-        notificationBuilder.setStyle(new NotificationCompat.BigTextStyle().bigText(ab));
-        notificationBuilder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
-        NotificationManagerCompat notificationmanagercompat= NotificationManagerCompat.from(this);
-        notificationmanagercompat.notify(000,notificationBuilder.build());
+//        NotificationCompat.Builder notificationBuilder = (NotificationCompat.Builder) new NotificationCompat.Builder(this,CHANNEL_ID);
+//        notificationBuilder.setSmallIcon(R.drawable.ic_launcher_background);
+//        notificationBuilder.setContentTitle("pickmymovie");
+//        //Toast.makeText(MainActivity.this,ab, Toast.LENGTH_SHORT).show();
+//        notificationBuilder.setContentText(ab);
+//        notificationBuilder.setStyle(new NotificationCompat.BigTextStyle().bigText(ab));
+//        notificationBuilder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
+//        NotificationManagerCompat notificationmanagercompat= NotificationManagerCompat.from(this);
+//        notificationmanagercompat.notify(000,notificationBuilder.build());
     }
 }

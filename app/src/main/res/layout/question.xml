@@ -5,6 +5,7 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="1. hello this is the question that im gonna give you"
@@ -13,30 +14,35 @@
         ></TextView>
 
     <RadioGroup
+        android:id="@+id/radio_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginBottom="15dp"
         >
         <RadioButton
+            android:id="@+id/radio1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Option A"
             ></RadioButton>
 
         <RadioButton
+            android:id="@+id/radio2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Option B"
             ></RadioButton>
 
         <RadioButton
+            android:id="@+id/radio3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Option C"
             ></RadioButton>
 
         <RadioButton
+            android:id="@+id/radio4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Option D"

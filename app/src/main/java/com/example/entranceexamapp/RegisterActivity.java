@@ -56,6 +56,7 @@ public class RegisterActivity extends AppCompatActivity {
         if(fAuth.getCurrentUser() != null){
 
             startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+            finish();
         }
 
         register.setOnClickListener(new View.OnClickListener(){
