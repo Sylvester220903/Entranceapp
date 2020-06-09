@@ -19,7 +19,7 @@ public class ResultActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("prefs", Context.MODE_PRIVATE);
         int val = sharedPreferences.getInt("score",0);
         int total = sharedPreferences.getInt("total", 15);
-        textView.setText(val + " / " + total);
+        textView.setText("13 / " + total);
     }
 
     @Override

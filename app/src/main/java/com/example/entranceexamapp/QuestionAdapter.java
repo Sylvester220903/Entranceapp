@@ -25,6 +25,8 @@ public class QuestionAdapter extends ArrayAdapter {
     RadioGroup radioGroup;
     RadioButton radioButton1, radioButton2, radioButton3, radioButton4;
 
+    public String result;
+
     Context mContext;
 
     public QuestionAdapter(Context context, int resource, ArrayList<QuestionModel> questions, ArrayList<Integer> score) {
@@ -71,11 +73,15 @@ public class QuestionAdapter extends ArrayAdapter {
                 }
 
                 String val = "";
+                int temp = 0;
                 for (int j=0; j<questions.size(); j++){
                     val+=Integer.toString(score.get(j));
+                    temp = temp + score.get(j);
                 }
                 Log.v("score", val);
 
+                String temp2 = String.valueOf(score.get(0));
+                result = temp2;
             }
         });
 

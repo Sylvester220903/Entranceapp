@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -21,9 +22,25 @@ public class QuestionsActivity extends AppCompatActivity {
     Button submitButton;
 
     @Override
+    public void onPause() {
+        super.onPause();
+
+        Context context = getApplicationContext();
+        CharSequence text = "Stop Cheating, Start the Test from the beginning again";
+        int duration = Toast.LENGTH_LONG;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+
+        super.finish();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
+
+
 
         listView = findViewById(R.id.questions_list);
         submitButton = findViewById(R.id.submit_button);
@@ -168,7 +185,9 @@ public class QuestionsActivity extends AppCompatActivity {
                 editor.putInt("score", val);
                 editor.putInt("total", questions.size());
                 editor.commit();
-                startActivity(new Intent(QuestionsActivity.this, ResultActivity.class));
+                Intent intent = new Intent(QuestionsActivity.this, ResultActivity.class);
+                intent.putExtra("Result", questionAdapter.result);
+                startActivity(intent);
                 finish();
             }
         });
